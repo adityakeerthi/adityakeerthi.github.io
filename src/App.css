@@ -4,12 +4,13 @@
 
 body {
   /* background-color: rgb(252, 251, 244); */
+  font: arial;
   background-color: #1d1e20;
 }
 
 .center{
   /* other base styles go here */
-  width: 50rem;
+  width: 40rem;
   padding: 4rem;
 }
 
