@@ -16,10 +16,13 @@ export default function About() {
                 Currently, I'm a software engineering student at the University
                 of <a class="hover:text-yellow-200 text-yellow-400" 
                 target="_blank" rel="noreferrer" href="https://uwaterloo.ca/">Waterloo</a>. 
-                I'm working as a software developer at <a 
+                I'm working as a software engineer intern at <a class="hover:text-green-100
+                text-green-300" target="_blank" rel="noreferrer" href="https://www.litespace.io/">
+                Litespace</a>. I've worked as a software developer at <a 
                 class="hover:text-red-200 text-red-400" 
-                target="_blank" rel="noreferrer" href="https://www.toyota.ca/toyota/en/">Toyota</a>. 
-                I've previously interned at <a class="hover:text-purple-200 text-purple-300" 
+                target="_blank" rel="noreferrer" href="https://www.toyota.ca/toyota/en/">Toyota</a>, 
+                building internal backend microservices. 
+                I've also previously interned at <a class="hover:text-purple-200 text-purple-300" 
                 target="_blank" rel="noreferrer" href="https://www.feroot.com/">Feroot</a>, 
                 a leader in client side security.
             </p>
