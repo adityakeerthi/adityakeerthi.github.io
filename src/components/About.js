@@ -14,13 +14,13 @@ export default function About() {
             </p>
             <p class="mt-4 text-stone-500 hover:scale-105 transition duration-500"> 
                 Currently, I'm a software engineering student at the University
-                of <a class="hover:text-yellow-200 text-yellow-400" 
+                of <a class="hover:text-yellow-500 transition duration-500 text-yellow-400" 
                 target="_blank" rel="noreferrer" href="https://uwaterloo.ca/">Waterloo</a>. 
-                I've worked at <a class="hover:text-purple-200 text-purple-300" 
+                I've worked at <a class="hover:text-purple-500 transition duration-500 text-purple-300" 
                 target="_blank" rel="noreferrer" href="https://www.feroot.com/">Feroot</a>, 
-                <a class="hover:text-green-100 text-green-300" target="_blank" 
+                <a class="hover:text-green-500 transition duration-500 text-green-300" target="_blank" 
                 rel="noreferrer" href="https://www.litespace.io/"> Litespace</a>, and
-                <a class="hover:text-red-200 text-red-400" 
+                <a class="hover:text-red-500 transition duration-500 text-red-400" 
                 target="_blank" rel="noreferrer" href="https://www.toyota.ca/toyota/en/"> Toyota</a>.
             </p>
             <p class="mt-4 text-stone-500 hover:scale-105 transition duration-500">
