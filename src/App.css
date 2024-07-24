@@ -6,12 +6,12 @@ body {
   /* background-color: rgb(252, 251, 244); */
   font: arial;
   color: #002b36;
-  background-color: #fdf6e3;
+  background-color: #1d1e20;
 }
 
 .center{
   /* other base styles go here */
-  width: 40rem;
+  width: 45rem;
   padding: 4rem;
 }
 
