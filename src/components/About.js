@@ -1,5 +1,4 @@
 import './Components.css';
-import Resume from '../files/resume.pdf';
 
 export default function About() {
     return (
@@ -14,6 +13,8 @@ export default function About() {
                 Hi, I'm Aditya and I'm a software engineering student at the University
                 of <a className="hover:text-yellow-500 transition duration-500 text-yellow-400" 
                 target="_blank" rel="noreferrer" href="https://uwaterloo.ca/">Waterloo</a>. 
+                I'm working at <a className="hover:text-blue-300 transition duration-500 text-blue-500" 
+                target="_blank" rel="noreferrer" href="https://daffodilhealth.co/">Daffodil</a> as a SWE intern. 
                 I've worked at <a className="hover:text-purple-500 transition duration-500 text-purple-300" 
                 target="_blank" rel="noreferrer" href="https://www.feroot.com/">Feroot</a>, 
                 <a className="hover:text-green-500 transition duration-500 text-green-300" target="_blank" 
@@ -23,9 +24,8 @@ export default function About() {
             </p>
 
             <p className="mt-4 text-stone-400 transition duration-500">
-                I'm looking for co-op/internship opportunities for Fall 2024.
-                For more information, please check out my <a className="text-stone-400 hover:text-amber-100 underline transition duration-500 
-                underline-offset-4" href={Resume}>resume</a> or shoot me an <a 
+                I'm looking for co-op/internship opportunities for <a className="text-indigo-50"> Summer 2025. </a>
+                For more information, please feel free to shoot me an <a 
                 className="text-stone-400 hover:text-amber-100 transition duration-500 underline underline-offset-4" 
                 href="mailto:aditya.keerthi1@uwaterloo.ca">email</a>.
             </p>
