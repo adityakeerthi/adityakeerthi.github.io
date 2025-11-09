@@ -5,6 +5,7 @@ import About from './components/About';
 
 export default function App() {
   const [theme, setTheme] = useState(null);
+  const [isAnimating, setIsAnimating] = useState(false);
 
   useEffect(() => {
     // Check localStorage first, then system preference
@@ -24,6 +25,10 @@ export default function App() {
     setTheme(newTheme);
     document.documentElement.setAttribute('data-theme', newTheme);
     localStorage.setItem('theme', newTheme);
+
+    // Trigger animation
+    setIsAnimating(true);
+    setTimeout(() => setIsAnimating(false), 500);
   };
 
   return (
@@ -35,9 +40,9 @@ export default function App() {
           aria-label="Toggle theme"
         >
           {theme === 'light' ? (
-            <>go <span className="text-purple-900">night</span></>
+            <><span className={`text-purple-900 ${isAnimating ? 'highlight-dark' : ''}`}>dark</span></>
           ) : (
-            <>go <span className="text-yellow-500">day</span></>
+            <><span className={`text-yellow-500 ${isAnimating ? 'highlight-light' : ''}`}>light</span></>
           )}
         </button>
       </div>
