@@ -1,24 +1,52 @@
 import './App.css';
+import { useState, useEffect } from 'react';
 
 import About from './components/About';
-import Links from './components/Links';
-// import Projects from './components/Projects';
 
 export default function App() {
+  const [theme, setTheme] = useState(null);
+
+  useEffect(() => {
+    // Check localStorage first, then system preference
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme) {
+      setTheme(savedTheme);
+      document.documentElement.setAttribute('data-theme', savedTheme);
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+      setTheme('dark');
+    } else {
+      setTheme('light');
+    }
+  }, []);
+
+  const toggleTheme = () => {
+    const newTheme = theme === 'light' ? 'dark' : 'light';
+    setTheme(newTheme);
+    document.documentElement.setAttribute('data-theme', newTheme);
+    localStorage.setItem('theme', newTheme);
+  };
+
   return (
-    <div>
-      <div class="flex flex-row">
-        <div class="flex flex-grow" />
-        <div class="leading-loose center min-h-screen flex-wrap">
-          <About />
-          <Links />
-          {/* <Projects /> */}
-        </div>
-        <div class="flex flex-grow" />
+    <div className="flex flex-row">
+      <div className="toggle-container">
+        <button
+          className="theme-toggle"
+          onClick={toggleTheme}
+          aria-label="Toggle theme"
+        >
+          {theme === 'light' ? (
+            <>go <span className="text-purple-900">night</span></>
+          ) : (
+            <>go <span className="text-yellow-500">day</span></>
+          )}
+        </button>
       </div>
-      <p className="fixed bottom-0 right-0 p-4 opacity-5">
-        add me on val <a className="transition duration-500 hover:text-red-500" href="https://github.com/adityakeerthi" rel="noreferrer" target="_blank">d1t#1day</a>
-      </p>
+      <div className="flex flex-grow" />
+      <div className="center min-h-screen">
+        <About />
+        {/* <Projects /> */}
+      </div>
+      <div className="flex flex-grow" />
     </div>
   )
 }
