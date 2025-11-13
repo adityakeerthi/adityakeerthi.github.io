@@ -1,1 +1,82 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"/><link rel="icon" href="/icon.ico"/><meta name="viewport" content="width=device-width,initial-scale=1"/><meta name="theme-color" content="#000000"/><meta name="description" content="Web site created using create-react-app"/><link rel="apple-touch-icon" href="/logo192.png"/><link rel="manifest" href="/manifest.json"/><title>Aditya Keerthi</title><script defer="defer" src="/static/js/main.fee00796.js"></script><link href="/static/css/main.1570011f.css" rel="stylesheet"></head><body><noscript>You need to enable JavaScript to run this app.</noscript><div id="root"></div></body></html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Aditya Keerthi - Software Engineering Student">
+    <title>Aditya Keerthi</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <div class="theme-toggle-container">
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+            <span id="themeText"></span>
+        </button>
+    </div>
+
+    <div class="container">
+        <main>
+            <h1>Aditya Keerthi</h1>
+<p>Hi, I study software engineering. I like dreaming, video games, and the idea of travelling.</p>
+<p>I was previously an intern at Meta.</p>
+<p>I'm bullish on prediction markets and computer architecture.</p>
+<p>You can reach me at <a href="mailto:adityakeerthi05@gmail.com">adityakeerthi05@gmail.com</a>.</p>
+
+        </main>
+    </div>
+
+    <script>
+        // Theme toggle functionality
+        const themeToggle = document.getElementById('themeToggle');
+        const themeText = document.getElementById('themeText');
+
+        // Initialize theme from localStorage or system preference
+        function initTheme() {
+            const savedTheme = localStorage.getItem('theme');
+            let theme;
+
+            if (savedTheme) {
+                theme = savedTheme;
+            } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+                theme = 'dark';
+            } else {
+                theme = 'light';
+            }
+
+            setTheme(theme, false);
+        }
+
+        // Set theme and update UI
+        function setTheme(theme, animate = true) {
+            document.documentElement.setAttribute('data-theme', theme);
+            localStorage.setItem('theme', theme);
+
+            if (theme === 'light') {
+                themeText.textContent = 'dark';
+                themeText.className = 'dark-mode';
+                if (animate) {
+                    themeText.classList.add('highlight-dark');
+                    setTimeout(() => themeText.classList.remove('highlight-dark'), 500);
+                }
+            } else {
+                themeText.textContent = 'light';
+                themeText.className = 'light-mode';
+                if (animate) {
+                    themeText.classList.add('highlight-light');
+                    setTimeout(() => themeText.classList.remove('highlight-light'), 500);
+                }
+            }
+        }
+
+        // Toggle theme on button click
+        themeToggle.addEventListener('click', () => {
+            const currentTheme = document.documentElement.getAttribute('data-theme');
+            const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+            setTheme(newTheme, true);
+        });
+
+        // Initialize on page load
+        initTheme();
+    </script>
+</body>
+</html>
