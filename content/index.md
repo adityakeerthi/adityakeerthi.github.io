@@ -11,5 +11,5 @@ I was previously an intern at Meta.
 
 I'm bullish on prediction markets and computer architecture.
 
-You can reach me at [adityakeerthi05@gmail.com](mailto:adityakeerthi05@gmail.com).
+You can reach me at [aditya.keerthi1@uwaterloo.ca](mailto:aditya.keerthi1@uwaterloo.ca).
 
