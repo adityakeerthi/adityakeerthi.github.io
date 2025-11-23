@@ -1,2 +1,2 @@
 # My website
-My website is built on React and TailwindCSS. You can view it [here](https://adityakeerthi.github.io/).
+My website is built on 11ty. You can view it [here](https://adityakeerthi.com/).
